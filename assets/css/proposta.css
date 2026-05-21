@@ -1,0 +1,55 @@
+/* ════ Scroll Snap ════ */
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; overflow-y: scroll; }
+.slide { scroll-snap-align: start; }
+
+/* ════ Navigation Dots (criados pelo JS) ════ */
+.dot { width:7px; height:7px; border-radius:50%; background:#C4D0CB; border:none; cursor:pointer; transition:all .25s; padding:0; display:block; }
+.dot.on { background:#1DB954; transform:scale(1.5); }
+
+/* ════ Background grid patterns ════ */
+.bg-grid {
+  position:absolute; inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:72px 72px;
+}
+.pf-bg-grid {
+  position:absolute; inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+
+/* ════ Keyframes ════ */
+@keyframes prog { from{width:38%} to{width:73%} }
+
+/* ════ Pseudo-elementos ════ */
+.sc-head::after {
+  content:''; position:absolute; right:-24px; top:-24px;
+  width:90px; height:90px; border-radius:50%; background:rgba(255,255,255,.07);
+}
+.si::before { content:'→'; color:#1DB954; font-size:12px; font-weight:800; flex-shrink:0; }
+.inv-box::after {
+  content:''; position:absolute; right:-48px; bottom:-48px;
+  width:180px; height:180px; border-radius:50%; background:rgba(29,185,84,.07);
+}
+.s4b-right::before {
+  content:''; position:absolute; top:-60px; right:-60px;
+  width:280px; height:280px; border-radius:50%; background:rgba(76,175,80,.12);
+}
+.s4b-right::after {
+  content:''; position:absolute; bottom:-40px; left:-40px;
+  width:200px; height:200px; border-radius:50%; background:rgba(56,142,60,.08);
+}
+
+/* ════ Estados gerenciados pelo JS ════ */
+.pf-detail-panel { transition:opacity .3s ease; }
+.pf-detail-panel.pf-fade { opacity:0; }
+.pf-card { cursor:pointer; transition:all .22s ease; }
+.pf-card:hover { opacity:1 !important; border-color:rgba(255,255,255,.18) !important; transform:translateY(-2px); }
+.pf-card.pf-active { opacity:1 !important; border-color:rgba(255,255,255,.3) !important; box-shadow:0 0 0 1px rgba(255,255,255,.2); }
+
+/* ════ Hovers com transform ════ */
+.sc { transition:transform .22s ease, box-shadow .22s ease; }
+.sc:hover { transform:translateY(-4px); box-shadow:0 16px 48px rgba(0,0,0,.12); }
+.s4b-feature { transition:transform .2s ease, box-shadow .2s ease; }
+.s4b-feature:hover { transform:translateX(4px); box-shadow:0 6px 20px rgba(27,94,32,.1); }
+.cta:hover { background:#158A3E !important; }

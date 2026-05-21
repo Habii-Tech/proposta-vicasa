@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta Comercial — Habii.tech × Fazendinhas Belo Vale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Work Sans"', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/proposta.css">
+</head>
+<body class="font-sans bg-[#F4F8F5] text-[#0C1410] antialiased">
+
+  <!-- UI Fixa de Navegação -->
+  <div id="progress" class="fixed top-0 left-0 h-[3px] bg-[#1DB954] z-[500] transition-[width] duration-[400ms] ease-out" style="width:12.5%"></div>
+  <div id="dots" class="fixed right-10 top-1/2 -translate-y-1/2 z-[500] flex flex-col gap-[9px]"></div>
+  <div id="counter" class="fixed bottom-8 right-10 z-[500] text-[12px] font-bold tracking-[.06em] text-[#C4D0CB]">1 / 10</div>
+
+  <!-- Container onde os componentes são injetados -->
+  <main id="slides-container"></main>
+
+  <!-- Componentes (ordem das seções) -->
+  <script src="assets/components/s1-capa.js"></script>
+  <script src="assets/components/s2-sobre.js"></script>
+  <script src="assets/components/s9-portfolio.js"></script>
+  <script src="assets/components/s3-dores.js"></script>
+  <script src="assets/components/s4-escopo.js"></script>
+  <script src="assets/components/s4b-solucao.js"></script>
+  <script src="assets/components/s5-investimento.js"></script>
+  <script src="assets/components/s6-prazos.js"></script>
+  <script src="assets/components/s7-metodologia.js"></script>
+  <script src="assets/components/s8-encerramento.js"></script>
+
+  <!-- Scripts de funcionalidade (carregados após todos os componentes) -->
+  <script src="assets/js/cases.js"></script>
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/nav.js"></script>
+
+</body>
+</html>
