@@ -1,6 +1,6 @@
 document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
 <!-- S4 — ESCOPO -->
-<section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-white" id="s4" data-i="4">
+<section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-white" id="s4" data-i="5">
   <div class="absolute top-0 left-0 right-0 h-[72px] flex items-center justify-between px-[34px] z-10 overflow-visible">
     <img src="assets/images/logotipo_branco.png" alt="Habii.tech" style="height:150px;width:auto;display:block;padding-left:0;">
     <span class="text-[11px] font-bold tracking-[.1em] uppercase text-[#8FA398]">Escopo · Fazendinhas</span>
@@ -33,7 +33,10 @@ document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
           <div class="si flex items-baseline gap-3 text-[15px] text-[#374840] py-[9px] font-medium border-b border-[#E8F0EB] leading-[1.35]">Histórico de encomendas</div>
           <div class="si flex items-baseline gap-3 text-[15px] text-[#374840] py-[9px] font-medium border-b border-[#E8F0EB] leading-[1.35]">Reclamações — Cadastrar, Responder, Excluir</div>
           <div class="si flex items-baseline gap-3 text-[15px] text-[#374840] py-[9px] font-medium border-b border-[#E8F0EB] leading-[1.35]">Notificações — Listagem (encomendas + alertas)</div>
-          <div class="si flex items-baseline gap-3 text-[15px] text-[#374840] py-[9px] font-medium leading-[1.35]">Disparo de notificações via WhatsApp/Email (sugestão)</div>
+          <div class="si flex items-center gap-3 text-[15px] text-[#374840] py-[9px] font-medium leading-[1.35]">
+            <span class="flex-1">Disparo de notificações via WhatsApp/Email (sugestão)</span>
+            <span class="flex-shrink-0 text-[11px] font-bold tracking-[.04em] bg-[#FFF7E6] text-[#B45309] border border-[#F6D28A] rounded-full px-[10px] py-[3px] whitespace-nowrap">+ R$ 4.800</span>
+          </div>
         </div>
       </div>
 
