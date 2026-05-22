@@ -1,4 +1,6 @@
-document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
+document.getElementById("slides-container").insertAdjacentHTML(
+  "beforeend",
+  `
 <!-- S2 — SOBRE HABII -->
 <section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-white" id="s2" data-i="1">
   <div class="absolute top-0 left-0 right-0 h-[72px] flex items-center justify-between px-[34px] z-10 overflow-visible">
@@ -40,4 +42,5 @@ document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
     </div>
   </div>
 </section>
-`);
+`,
+);

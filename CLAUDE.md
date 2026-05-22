@@ -47,6 +47,55 @@ When adding a case: add a `CASES` entry, drop its image into `assets/images/`, a
 ## Conventions
 
 - Language: All copy is Brazilian Portuguese. Keep it that way.
-- Brand colors: `#1DB954` (Habii green accent), `#1F2B23` (dark green bg), `#F4F8F5` (page bg), `#0C1410` (text). Each portfolio case has its own `color`/`glowColor`/`screenFill`.
 - Font: Work Sans (via Google Fonts in `index.html`).
 - Styling: prefer Tailwind utility classes inline; reach for `proposta.css` only for selectors Tailwind can't handle.
+
+## Design system (tokens in `tailwind.config`)
+
+The `tailwind.config` block inside `index.html` defines semantic tokens. **Always use these tokens** instead of arbitrary `text-[12.5px]` / `text-[#5C6E64]` values. If a value isn't in the system, either it's wrong or the system needs a new token (discuss first).
+
+### Typography scale
+
+| Token | Use for | Resolved |
+|---|---|---|
+| `text-h1` | Cover hero only | `clamp(52px,6vw,82px)` · 900 · `-0.04em` · `0.95` |
+| `text-h2` | Slide title (every section) | `clamp(36px,4vw,54px)` · 900 · `-0.03em` · `1` |
+| `text-h3` | Subsection title inside a slide | `22px` · 800 · `-0.025em` · `1.1` |
+| `text-h4` | Large card title | `17px` · 800 · `-0.015em` · `1.2` |
+| `text-lead` | Intro paragraph | `17px` · 400 · `1.65` |
+| `text-body` | Default body | `15px` · 400 · `1.65` |
+| `text-body-sm` | Body inside cards | `13px` · 400 · `1.65` |
+| `text-caption` | Card title (small), metadata, chip label | `12px` · 500 · `1.5` |
+| `text-micro` | Tiny meta (under a chip, etc.) | `11px` · 500 · `1.4` |
+| `text-eyebrow` | Section kicker (always combined with `uppercase`) | `11px` · 700 · `.1em` · `1.1` |
+| `text-eyebrow-sm` | Sub-kicker inside a card | `10px` · 700 · `.14em` · `1.1` |
+
+Pesos vêm embutidos nos tokens — sobrescreva (`font-extrabold`, `font-semibold`) só quando intencional.
+
+### Colors
+
+| Token | Hex | Use for |
+|---|---|---|
+| `text-ink` / `bg-ink` | `#0C1410` | Títulos, texto forte |
+| `text-ink-body` | `#374840` | Corpo principal |
+| `text-ink-muted` | `#5C6E64` | Corpo secundário, descrições de card |
+| `text-ink-soft` | `#8FA398` | Labels, metadados, eyebrow neutro |
+| `text-brand` / `bg-brand` | `#1DB954` | Acento ativo |
+| `text-brand-dark` | `#158A3E` | Texto verde sobre fundo claro (eyebrow colorido) |
+| `text-brand-soft` | `#6EBF8B` | Termo destacado em `<em>` |
+| `bg-brand-bg` | `#F0FDF4` | Fundo de badge/chip claro |
+| `border-brand-border` | `#D1FAE5` | Border de badge/chip claro |
+| `bg-surface-page` | `#F4F8F5` | Fundo padrão de slide claro |
+| `bg-surface-card` | `#FFFFFF` | Cards |
+| `border-surface-line` | `#DDE8E2` | Borders de card / divisores |
+| `bg-surface-dark` | `#1F2B23` | Fundo de slide escuro (capa, blocos contrastantes) |
+
+### Anatomia padrão de um slide
+
+1. **Header bar** (h-72px, absolute top): logo + eyebrow do título no canto direito.
+2. **Eyebrow** (`text-eyebrow uppercase text-brand-dark`) + **H2** (`text-h2 text-ink` com `<em class="text-brand-soft not-italic">` no destaque).
+3. **Lead** (`text-body text-ink-muted`) ao lado ou abaixo, max-width ~400px.
+4. **Conteúdo em grid** de cards: `bg-surface-card border border-surface-line rounded-[20px]`.
+5. Ícone do card em badge: `w-10 h-10 bg-brand-bg border border-brand-border rounded-[9px]` com SVG `stroke="#158A3E"` (ou cor temática para alertas).
+
+Slides ainda usando classes "cruas" (`text-[15px]`, `text-[#5C6E64]`): migrar para tokens quando tocar no arquivo. O `s7-metodologia.js` é a referência atual da migração.

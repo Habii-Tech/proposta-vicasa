@@ -1,6 +1,6 @@
 document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
 <!-- S4b — MOCKUP / SOLUÇÃO VISUAL -->
-<section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-white" id="s4b" data-i="5">
+<section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-white" id="s4b" data-i="6">
   <div class="absolute top-0 left-0 right-0 h-[72px] flex items-center justify-between px-[34px] z-10 overflow-visible">
     <img src="assets/images/logotipo_branco.png" alt="Habii.tech" style="height:150px;width:auto;display:block;padding-left:0;">
     <span class="text-[11px] font-bold tracking-[.1em] uppercase text-[#8FA398]">A solução · Fazendinhas</span>

@@ -1,6 +1,6 @@
 document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
 <!-- S9 — PORTFÓLIO -->
-<section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-[rgb(31,43,35)] text-white" id="s9" data-i="2">
+<section class="slide w-full min-h-screen relative overflow-hidden flex flex-col bg-[rgb(31,43,35)] text-white" id="s9" data-i="3">
   <div class="pf-bg-grid"></div>
   <div class="absolute" style="right:-15%;top:-20%;width:70%;height:80%;background:radial-gradient(60% 70% at 70% 30%, rgba(29,185,84,.06) 0%, transparent 70%);pointer-events:none;"></div>
   <div class="absolute top-0 left-0 right-0 h-[72px] flex items-center justify-between px-[34px] z-10 overflow-visible">
