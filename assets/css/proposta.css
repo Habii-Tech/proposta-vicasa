@@ -53,3 +53,92 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; overflow-y: scrol
 .s4b-feature { transition:transform .2s ease, box-shadow .2s ease; }
 .s4b-feature:hover { transform:translateX(4px); box-shadow:0 6px 20px rgba(27,94,32,.1); }
 .cta:hover { background:#158A3E !important; }
+
+/* ════════════════════════════════════════════════
+   IMPRESSÃO / EXPORT PDF
+   Como usar: Chrome → Ctrl+P → "Mais configurações"
+   → desmarcar "Cabeçalhos e rodapés"
+   → marcar "Gráficos de fundo"
+   → Salvar como PDF
+   ════════════════════════════════════════════════ */
+@media print {
+
+  /* ── Página A4 landscape, sem margens ── */
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  /* ── Força a impressão de todas as cores e backgrounds ── */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ── Libera o scroll-snap para os slides fluírem normalmente ── */
+  html {
+    scroll-snap-type: none !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  body {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* ── Esconde os elementos de navegação ── */
+  #progress,
+  #dots,
+  #counter {
+    display: none !important;
+  }
+
+  /* ── Cada slide ocupa exatamente uma página ──
+     100vh em @media print = altura do @page (210mm no A4 landscape).
+     overflow:hidden mantém o mesmo recorte visual da tela. */
+  .slide {
+    scroll-snap-align: none !important;
+    height: 100vh !important;
+    min-height: unset !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* Último slide: remove o page-break para não gerar página em branco */
+  .slide:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  /* ── Remove hover/transitions que não fazem sentido em PDF ── */
+  .sc,
+  .s4b-feature,
+  .pf-card {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* ── Artefatos visuais: blurs e grandes box-shadows ──
+     O renderizador de PDF do Chrome não suaviza filter:blur() nem
+     box-shadows com raio > ~20px — renderiza como retângulo semiopaco.
+     Solução: remover globalmente; bordas garantem separação visual. */
+
+  /* Remove box-shadow e text-shadow de todos os elementos */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Elementos Tailwind com blur (círculos decorativos, ex: blur-2xl) */
+  [class*="blur-"] {
+    display: none !important;
+  }
+
+  /* Elementos com filter:blur() inline (ex: #pf-glow em s9) */
+  [style*="blur"] {
+    filter: none !important;
+    opacity: 0 !important;
+  }
+}
