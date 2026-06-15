@@ -15,8 +15,8 @@ document.getElementById("slides-container").insertAdjacentHTML(
       <p class="text-[16px] text-[#5C6E64] leading-[1.78] mb-[18px]">Sem surpresas. Você sabe exatamente o que paga e o que recebe em cada etapa do projeto.</p>
       <div class="inv-box bg-[#0C1410] rounded-[20px] p-10 mt-7 relative overflow-hidden">
         <div class="text-[11px] font-bold tracking-[.1em] uppercase text-[#1DB954] mb-[22px]">Investimento total · MVP Vicasa</div>
-        <div class="text-[clamp(26px,3vw,42px)] font-black text-white tracking-[-0.03em] leading-[1.15] mb-[10px]">Entrada de <em class="text-[#1DB954] not-italic">R$ 15.000</em><br>+ 3 parcelas de <em class="text-[#1DB954] not-italic">R$ 15.000</em></div>
-        <div class="text-[14px] text-white/30 mb-6">Valor total: <strong class="text-white/55 font-semibold">R$ 60.000,00</strong></div>
+        <div class="text-[clamp(26px,3vw,42px)] font-black text-white tracking-[-0.03em] leading-[1.15] mb-[10px]">Entrada de <em class="text-[#1DB954] not-italic">R$ 25.000</em><br>+ 6 parcelas de <em class="text-[#1DB954] not-italic">R$ 10.000</em></div>
+        <div class="text-[14px] text-white/30 mb-6">Valor total: <strong class="text-white/55 font-semibold">R$ 85.000,00</strong></div>
         <div class="h-px bg-white/[0.08] mb-[18px]"></div>
         <div class="text-[12px] text-white/25 leading-[1.6]">* Inclui PWA completo (web + mobile) para 3 perfis + painel admin.<br>* Não inclui domínio, hospedagem e manutenção pós-entrega.</div>
       </div>
