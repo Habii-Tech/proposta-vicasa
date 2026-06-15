@@ -20,12 +20,12 @@ document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
         <div>
           <div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#35E07A;margin-bottom:20px;">Prazo estimado</div>
           <div style="display:flex;align-items:baseline;gap:18px;line-height:1;">
-            <span style="font-size:100px;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1;">4</span>
+            <span style="font-size:100px;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1;">3–4</span>
             <span style="font-size:36px;font-weight:800;color:#35E07A;letter-spacing:-.02em;line-height:1;">meses</span>
           </div>
         </div>
         <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(53,224,122,.15);">
-          <div style="font-size:15px;color:rgba(255,255,255,.55);line-height:1.5;">App mobile + Painel web completo</div>
+          <div style="font-size:15px;color:rgba(255,255,255,.55);line-height:1.5;">MVP PWA completo · 3 perfis + painel admin</div>
         </div>
       </div>
       <div class="flex flex-col gap-[14px] flex-1">
@@ -55,7 +55,7 @@ document.getElementById('slides-container').insertAdjacentHTML('beforeend', `
       <div class="flex-shrink-0 mt-[3px]">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1DB954" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
-      <div class="text-[15px] text-[#374840] leading-[1.75] italic">"Trabalharemos com sprints de 1 a 2 semanas. A cada final de sprint, você recebe uma versão funcional do app para <strong class="text-[#0C1410] not-italic font-bold">avaliar e dar feedback</strong> antes de seguirmos."</div>
+      <div class="text-[15px] text-[#374840] leading-[1.75] italic">"Trabalharemos com sprints de 1 a 2 semanas. A cada final de sprint, você recebe uma versão funcional para <strong class="text-[#0C1410] not-italic font-bold">testar, validar e dar feedback</strong> antes de seguirmos para a próxima etapa."</div>
     </div>
     <div class="flex items-center justify-between mt-4 p-[13px_18px] bg-[#F4F8F5] border border-[#DDE8E2] rounded-[10px]">
       <span class="text-[13px] text-[#8FA398]">* Prazos podem variar conforme aprovação de requisitos adicionais.</span>
