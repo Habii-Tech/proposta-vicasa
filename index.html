@@ -17,39 +17,73 @@
             fontSize: {
               // Sistema tipográfico — usar SEMPRE estes tokens.
               // [size, { lineHeight, letterSpacing, fontWeight }]
-              eyebrow:    ['11px',                  { lineHeight: '1.1',  letterSpacing: '.1em',    fontWeight: '700' }],
-              'eyebrow-sm': ['10px',                { lineHeight: '1.1',  letterSpacing: '.14em',   fontWeight: '700' }],
-              h1:         ['clamp(52px,6vw,82px)',  { lineHeight: '.95',  letterSpacing: '-.04em',  fontWeight: '900' }],
-              h2:         ['clamp(36px,4vw,54px)',  { lineHeight: '1',    letterSpacing: '-.03em',  fontWeight: '900' }],
-              h3:         ['22px',                  { lineHeight: '1.1',  letterSpacing: '-.025em', fontWeight: '800' }],
-              h4:         ['17px',                  { lineHeight: '1.2',  letterSpacing: '-.015em', fontWeight: '800' }],
-              lead:       ['17px',                  { lineHeight: '1.65', fontWeight: '400' }],
-              body:       ['15px',                  { lineHeight: '1.65', fontWeight: '400' }],
-              'body-sm':  ['13px',                  { lineHeight: '1.65', fontWeight: '400' }],
-              caption:    ['12px',                  { lineHeight: '1.5',  fontWeight: '500' }],
-              micro:      ['11px',                  { lineHeight: '1.4',  fontWeight: '500' }],
+              eyebrow: [
+                "11px",
+                { lineHeight: "1.1", letterSpacing: ".1em", fontWeight: "700" },
+              ],
+              "eyebrow-sm": [
+                "10px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: ".14em",
+                  fontWeight: "700",
+                },
+              ],
+              h1: [
+                "clamp(52px,6vw,82px)",
+                {
+                  lineHeight: ".95",
+                  letterSpacing: "-.04em",
+                  fontWeight: "900",
+                },
+              ],
+              h2: [
+                "clamp(36px,4vw,54px)",
+                { lineHeight: "1", letterSpacing: "-.03em", fontWeight: "900" },
+              ],
+              h3: [
+                "22px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-.025em",
+                  fontWeight: "800",
+                },
+              ],
+              h4: [
+                "17px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-.015em",
+                  fontWeight: "800",
+                },
+              ],
+              lead: ["17px", { lineHeight: "1.65", fontWeight: "400" }],
+              body: ["15px", { lineHeight: "1.65", fontWeight: "400" }],
+              "body-sm": ["13px", { lineHeight: "1.65", fontWeight: "400" }],
+              caption: ["12px", { lineHeight: "1.5", fontWeight: "500" }],
+              micro: ["11px", { lineHeight: "1.4", fontWeight: "500" }],
             },
             colors: {
               // Sistema de cores — texto e acentos.
               ink: {
-                DEFAULT: '#0C1410', // texto forte / títulos
-                strong:  '#0C1410',
-                body:    '#374840', // corpo principal
-                muted:   '#5C6E64', // corpo secundário
-                soft:    '#8FA398', // labels / metadados
+                DEFAULT: "#0C1410", // texto forte / títulos
+                strong: "#0C1410",
+                body: "#374840", // corpo principal
+                muted: "#5C6E64", // corpo secundário
+                soft: "#8FA398", // labels / metadados
               },
               brand: {
-                DEFAULT: '#1DB954', // verde puro (acento ativo)
-                dark:    '#158A3E', // verde para texto sobre fundo claro
-                soft:    '#6EBF8B', // verde suave (em <em>)
-                bg:      '#F0FDF4', // background de badge/chip
-                border:  '#D1FAE5', // border de badge/chip
+                DEFAULT: "#1DB954", // verde puro (acento ativo)
+                dark: "#158A3E", // verde para texto sobre fundo claro
+                soft: "#6EBF8B", // verde suave (em <em>)
+                bg: "#F0FDF4", // background de badge/chip
+                border: "#D1FAE5", // border de badge/chip
               },
               surface: {
-                page:    '#F4F8F5', // fundo de slide claro
-                card:    '#FFFFFF',
-                line:    '#DDE8E2', // borders de card
-                dark:    '#1F2B23', // fundo de slide escuro
+                page: "#F4F8F5", // fundo de slide claro
+                card: "#FFFFFF",
+                line: "#DDE8E2", // borders de card
+                dark: "#1F2B23", // fundo de slide escuro
               },
             },
           },
@@ -82,16 +116,16 @@
     <!-- Componentes (ordem das seções) -->
     <script src="assets/components/s1-capa.js"></script>
     <script src="assets/components/s2-sobre.js"></script>
-<!--    <script src="assets/components/s7-metodologia.js"></script>-->
+    <!--    <script src="assets/components/s7-metodologia.js"></script>-->
     <script src="assets/components/s9-portfolio.js"></script>
     <script src="assets/components/s3-dores.js"></script>
     <script src="assets/components/s4-escopo.js"></script>
     <script src="assets/components/s4b-solucao.js"></script>
     <script src="assets/components/s6-prazos.js"></script>
-<!--    <script src="assets/components/s6b-bonus.js"></script>-->
+    <!--    <script src="assets/components/s6b-bonus.js"></script>-->
     <script src="assets/components/s5-investimento.js"></script>
     <script src="assets/components/s8-encerramento.js"></script>
-<!--    <script src="assets/components/s10-obrigado.js"></script>-->
+    <!--    <script src="assets/components/s10-obrigado.js"></script>-->
 
     <!-- Scripts de funcionalidade (carregados após todos os componentes) -->
     <script src="assets/js/cases.js"></script>
